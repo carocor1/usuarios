@@ -48,6 +48,8 @@ describe('UsersService', () => {
     expect(result).toEqual(user);
   });
 
+  
+
   // PRUEBA QUE login() LANCE UnauthorizedException SI EL USUARIO NO EXISTE
   it('should throw UnauthorizedException if user is not found', async () => {
     jest.spyOn(service, 'findByEmail').mockResolvedValue(null);
@@ -77,5 +79,4 @@ describe('UsersService', () => {
     // Espera que la excepción UnauthorizedException sea lanzada
     await expect(service.login(body)).rejects.toThrow(UnauthorizedException);
   });
-
 });

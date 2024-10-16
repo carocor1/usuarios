@@ -3,7 +3,8 @@ import { Request } from 'express';
 import { UserEntity } from 'src/entities/users.entity';
 import { JwtService } from 'src/jwt/jwt.service';
 import { UsersService } from 'src/users/users.service';
-  
+ 
+
   
 @Injectable()
 export class AuthGuard implements CanActivate {
